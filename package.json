@@ -1,0 +1,25 @@
+{
+  "name": "gulp-spritezero",
+  "version": "1.0.0",
+  "description": "spritezero gulp plugin",
+  "author": "Matthew Wagerfield",
+  "license": "MIT",
+  "homepage": "https://github.com/wagerfield/gulp-spritezero#readme",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wagerfield/gulp-spritezero.git"
+  },
+  "keywords": [
+    "gulp",
+    "sprite",
+    "spritezero"
+  ],
+  "bugs": {
+    "url": "https://github.com/wagerfield/gulp-spritezero/issues"
+  },
+  "dependencies": {
+    "spritezero": "^3.5.0",
+    "through2": "^2.0.1"
+  }
+}
