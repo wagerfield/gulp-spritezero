@@ -2,7 +2,7 @@
 
 > Gulp plugin for [spritezero](https://github.com/mapbox/spritezero)
 
-## Usage
+### Install
 
 ```
 npm install gulp-spritezero
