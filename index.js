@@ -7,8 +7,8 @@ var path = require('path');
 var through = require('through2');
 var spritezero = require('spritezero');
 var util = require('gulp-util');
-var File = require('vinyl');
 var PluginError = util.PluginError;
+var File = util.File;
 
 //------------------------------
 // Constants
