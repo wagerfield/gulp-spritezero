@@ -1,3 +1,5 @@
+'use strict';
+
 //------------------------------
 // Imports
 //------------------------------
@@ -24,15 +26,13 @@ var DEFAULTS = {
 // Helpers
 //------------------------------
 
-function error(message) {
-  return new PluginError('gulp-spritezero', message);
-}
+const error = message => new PluginError('gulp-spritezero', message);
 
 //------------------------------
 // Exports
 //------------------------------
 
-module.exports = function(options) {
+module.exports = options => {
 
   // Build options
   options = _.assign({}, DEFAULTS, options);
@@ -66,33 +66,31 @@ module.exports = function(options) {
 
   // Flush stream
   function flush() {
-    var transform = this;
-    _.each(options.scales, function(scale) {
-      var postfix = scale === 1 ? '' : '@' + scale + 'x';
+    var stream = this;
+    _.each(options.scales, scale => {
+      var postfix = scale === 1 ? '' : `@${scale}x`;
 
       // Generate sprite formatted data
-      spritezero.generateLayout(graphics, scale, true, function(error, data) {
+      spritezero.generateLayout(graphics, scale, true, (error, data) => {
 
         // Add sdf boolean flag to each sprite object
-        _.each(data, function(sprite) {
-          sprite.sdf = options.sdf;
-        });
+        _.each(data, sprite => sprite.sdf = options.sdf);
 
         // Add formatted JSON data to the stream
-        transform.push(new File({
-          path: options.name + postfix + '.json',
+        stream.push(new File({
+          path: `${options.name}${postfix}.json`,
           contents: new Buffer(JSON.stringify(data, null, 2))
         }));
 
         // Generate sprite layout data
-        spritezero.generateLayout(graphics, scale, false, function(error, layout) {
+        spritezero.generateLayout(graphics, scale, false, (error, layout) => {
 
           // Generate sprite image
-          spritezero.generateImage(layout, function(error, result) {
+          spritezero.generateImage(layout, (error, result) => {
 
             // Add sprite image to the stream
-            transform.push(new File({
-              path: options.name + postfix + '.png',
+            stream.push(new File({
+              path: `${options.name}${postfix}.png`,
               contents: new Buffer(result)
             }));
           });
