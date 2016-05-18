@@ -1,6 +1,6 @@
 {
   "name": "gulp-spritezero",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Mapbox's spritezero package wrapped as a gulp plugin",
   "author": "Matthew Wagerfield",
   "license": "MIT",
