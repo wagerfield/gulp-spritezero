@@ -16,7 +16,8 @@ var PluginError = util.PluginError;
 
 var DEFAULTS = {
   scales: [1, 2],
-  name: 'sprite'
+  name: 'sprite',
+  sdf: false
 };
 
 //------------------------------
@@ -71,6 +72,11 @@ module.exports = function(options) {
 
       // Generate sprite formatted data
       spritezero.generateLayout(graphics, scale, true, function(error, data) {
+
+        // Add sdf boolean flag to each sprite object
+        _.each(data, function(sprite) {
+          sprite.sdf = options.sdf;
+        });
 
         // Add formatted JSON data to the stream
         transform.push(new File({
