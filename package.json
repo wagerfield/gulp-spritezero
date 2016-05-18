@@ -11,15 +11,26 @@
     "url": "git+https://github.com/wagerfield/gulp-spritezero.git"
   },
   "keywords": [
-    "gulp",
+    "gulpplugin",
+    "spritezero",
     "sprite",
-    "spritezero"
+    "mapbox"
   ],
+  "engines": {
+    "node": ">=4"
+  },
   "bugs": {
     "url": "https://github.com/wagerfield/gulp-spritezero/issues"
   },
   "dependencies": {
+    "gulp-util": "^3.0.7",
+    "lodash": "^4.12.0",
     "spritezero": "^3.5.0",
     "through2": "^2.0.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-sync": "^0.1.4"
   }
 }
