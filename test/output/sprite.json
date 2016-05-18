@@ -4,118 +4,135 @@
     "height": 48,
     "x": 0,
     "y": 0,
-    "pixelRatio": 1
+    "pixelRatio": 1,
+    "sdf": true
   },
   "bar": {
     "width": 24,
     "height": 24,
     "x": 36,
     "y": 0,
-    "pixelRatio": 1
+    "pixelRatio": 1,
+    "sdf": true
   },
   "bus": {
     "width": 24,
     "height": 24,
     "x": 0,
     "y": 48,
-    "pixelRatio": 1
+    "pixelRatio": 1,
+    "sdf": true
   },
   "cafe": {
     "width": 24,
     "height": 24,
     "x": 24,
     "y": 48,
-    "pixelRatio": 1
+    "pixelRatio": 1,
+    "sdf": true
   },
   "camera": {
     "width": 24,
     "height": 24,
     "x": 48,
     "y": 48,
-    "pixelRatio": 1
+    "pixelRatio": 1,
+    "sdf": true
   },
   "cart": {
     "width": 24,
     "height": 24,
     "x": 0,
     "y": 72,
-    "pixelRatio": 1
+    "pixelRatio": 1,
+    "sdf": true
   },
   "cinema": {
     "width": 24,
     "height": 24,
     "x": 24,
     "y": 72,
-    "pixelRatio": 1
+    "pixelRatio": 1,
+    "sdf": true
   },
   "dice": {
     "width": 24,
     "height": 24,
     "x": 48,
     "y": 72,
-    "pixelRatio": 1
+    "pixelRatio": 1,
+    "sdf": true
   },
   "dining": {
     "width": 24,
     "height": 24,
     "x": 72,
     "y": 48,
-    "pixelRatio": 1
+    "pixelRatio": 1,
+    "sdf": true
   },
   "hotel": {
     "width": 24,
     "height": 24,
     "x": 96,
     "y": 48,
-    "pixelRatio": 1
+    "pixelRatio": 1,
+    "sdf": true
   },
   "parking": {
     "width": 24,
     "height": 24,
     "x": 120,
     "y": 48,
-    "pixelRatio": 1
+    "pixelRatio": 1,
+    "sdf": true
   },
   "petrol": {
     "width": 24,
     "height": 24,
     "x": 72,
     "y": 72,
-    "pixelRatio": 1
+    "pixelRatio": 1,
+    "sdf": true
   },
   "pizza": {
     "width": 24,
     "height": 24,
     "x": 96,
     "y": 72,
-    "pixelRatio": 1
+    "pixelRatio": 1,
+    "sdf": true
   },
   "retail": {
     "width": 24,
     "height": 24,
     "x": 120,
     "y": 72,
-    "pixelRatio": 1
+    "pixelRatio": 1,
+    "sdf": true
   },
   "spa": {
     "width": 24,
     "height": 24,
     "x": 60,
     "y": 0,
-    "pixelRatio": 1
+    "pixelRatio": 1,
+    "sdf": true
   },
   "taxi": {
     "width": 24,
     "height": 24,
     "x": 84,
     "y": 0,
-    "pixelRatio": 1
+    "pixelRatio": 1,
+    "sdf": true
   },
   "ticket": {
     "width": 24,
     "height": 24,
     "x": 108,
     "y": 0,
-    "pixelRatio": 1
+    "pixelRatio": 1,
+    "sdf": true
   }
 }

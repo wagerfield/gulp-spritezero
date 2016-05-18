@@ -26,6 +26,6 @@ gulp.task('clean', function() {
 
 gulp.task('spritezero', function() {
   return gulp.src('assets/**/*')
-    .pipe(spritezero({ scales: [ 1, 2 ] }))
+    .pipe(spritezero({ sdf: true }))
     .pipe(gulp.dest(OUTPUT_PATH));
 });
