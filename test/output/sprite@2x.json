@@ -1,0 +1,121 @@
+{
+  "marker": {
+    "width": 72,
+    "height": 96,
+    "x": 0,
+    "y": 0,
+    "pixelRatio": 2
+  },
+  "bar": {
+    "width": 48,
+    "height": 48,
+    "x": 72,
+    "y": 0,
+    "pixelRatio": 2
+  },
+  "bus": {
+    "width": 48,
+    "height": 48,
+    "x": 0,
+    "y": 96,
+    "pixelRatio": 2
+  },
+  "cafe": {
+    "width": 48,
+    "height": 48,
+    "x": 48,
+    "y": 96,
+    "pixelRatio": 2
+  },
+  "camera": {
+    "width": 48,
+    "height": 48,
+    "x": 96,
+    "y": 96,
+    "pixelRatio": 2
+  },
+  "cart": {
+    "width": 48,
+    "height": 48,
+    "x": 0,
+    "y": 144,
+    "pixelRatio": 2
+  },
+  "cinema": {
+    "width": 48,
+    "height": 48,
+    "x": 48,
+    "y": 144,
+    "pixelRatio": 2
+  },
+  "dice": {
+    "width": 48,
+    "height": 48,
+    "x": 96,
+    "y": 144,
+    "pixelRatio": 2
+  },
+  "dining": {
+    "width": 48,
+    "height": 48,
+    "x": 144,
+    "y": 96,
+    "pixelRatio": 2
+  },
+  "hotel": {
+    "width": 48,
+    "height": 48,
+    "x": 192,
+    "y": 96,
+    "pixelRatio": 2
+  },
+  "parking": {
+    "width": 48,
+    "height": 48,
+    "x": 240,
+    "y": 96,
+    "pixelRatio": 2
+  },
+  "petrol": {
+    "width": 48,
+    "height": 48,
+    "x": 144,
+    "y": 144,
+    "pixelRatio": 2
+  },
+  "pizza": {
+    "width": 48,
+    "height": 48,
+    "x": 192,
+    "y": 144,
+    "pixelRatio": 2
+  },
+  "retail": {
+    "width": 48,
+    "height": 48,
+    "x": 240,
+    "y": 144,
+    "pixelRatio": 2
+  },
+  "spa": {
+    "width": 48,
+    "height": 48,
+    "x": 120,
+    "y": 0,
+    "pixelRatio": 2
+  },
+  "taxi": {
+    "width": 48,
+    "height": 48,
+    "x": 168,
+    "y": 0,
+    "pixelRatio": 2
+  },
+  "ticket": {
+    "width": 48,
+    "height": 48,
+    "x": 216,
+    "y": 0,
+    "pixelRatio": 2
+  }
+}
