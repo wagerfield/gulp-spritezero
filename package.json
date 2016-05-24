@@ -25,6 +25,7 @@
   "dependencies": {
     "gulp-util": "^3.0.7",
     "lodash": "^4.12.0",
+    "promise": "^7.1.1",
     "spritezero": "^3.5.0",
     "through2": "^2.0.1"
   },

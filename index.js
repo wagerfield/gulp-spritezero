@@ -7,6 +7,7 @@ var path = require('path');
 var through = require('through2');
 var spritezero = require('spritezero');
 var util = require('gulp-util');
+var Promise = require('promise');
 var PluginError = util.PluginError;
 var File = util.File;
 
@@ -65,37 +66,62 @@ module.exports = function(options) {
   }
 
   // Flush stream
-  function flush() {
+  function flush(callback) {
     var stream = this;
-    _.each(options.scales, function(scale) {
-      var postfix = scale === 1 ? '' : '@' + scale + 'x';
+    var promises = _.map(options.scales, function(scale) {
+      return new Promise(function(resolve, reject) {
+        var postfix = scale === 1 ? '' : '@' + scale + 'x';
 
-      // Generate sprite formatted data
-      spritezero.generateLayout(graphics, scale, true, function(error, data) {
+        // Generate sprite formatted data
+        spritezero.generateLayout(graphics, scale, true,
+          function(error, data) {
+          if (error) reject(error);
+          else {
 
-        // Add sdf boolean flag to each sprite object
-        _.each(data, function(sprite) { sprite.sdf = options.sdf; });
+            // Add sdf boolean flag to each sprite object
+            _.each(data, function(sprite) { sprite.sdf = options.sdf; });
 
-        // Add formatted JSON data to the stream
-        stream.push(new File({
-          path: options.name + postfix + '.json',
-          contents: new Buffer(JSON.stringify(data, null, 2))
-        }));
-
-        // Generate sprite layout data
-        spritezero.generateLayout(graphics, scale, false, function(error, layout) {
-
-          // Generate sprite image
-          spritezero.generateImage(layout, function(error, result) {
-
-            // Add sprite image to the stream
+            // Add formatted JSON file to the stream
             stream.push(new File({
-              path: options.name + postfix + '.png',
-              contents: new Buffer(result)
+              path: options.name + postfix + '.json',
+              contents: new Buffer(JSON.stringify(data, null, 2))
             }));
-          });
+
+            // Generate sprite layout data
+            spritezero.generateLayout(graphics, scale, false,
+              function(error, layout) {
+              if (error) reject(error);
+              else {
+
+                // Generate sprite image
+                spritezero.generateImage(layout,
+                  function(error, result) {
+                  if (error) reject(error);
+                  else {
+
+                    // Add sprite image file to the stream
+                    stream.push(new File({
+                      path: options.name + postfix + '.png',
+                      contents: new Buffer(result)
+                    }));
+
+                    // Resolve promise
+                    resolve();
+                  }
+                });
+              }
+            });
+          }
         });
       });
+    });
+
+    // Call flush callback when all promises
+    // have been resolved or rejected
+    Promise.all(promises).then(function(result) {
+      callback(null);
+    }, function(error) {
+      callback(error);
     });
   }
 
